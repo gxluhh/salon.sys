@@ -1,0 +1,754 @@
+* {
+    margin: 0;
+    font-family: helvetica;
+}
+
+body {
+    background-color: #000000;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-image: url(https://c4.wallpaperflare.com/wallpaper/437/1/294/texture-dark-black-fabric-wallpaper-preview.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.navbar {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #E5BB61;
+    font-weight: bold;
+    width: 100%;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.logo {
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7% 0 0 0;
+}
+
+.common-styles {
+    max-width: 400px;
+    border-radius: 25px;
+    resize: none;
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.content,
+.form-box {
+    width: 100%;
+    border: none;
+    text-align: center;
+    box-shadow: 0px 0px 20px #E5BB61;
+}
+
+.content h1,
+.form-box h1 {
+    font-size: 30px;
+    position: relative;
+    color: #FFFFFF;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.content h1::after,
+.form-box h1::after {
+    content: '';
+    width: 50px;
+    height: 4px;
+    border-radius: 3px;
+    background-color: #E5BB61;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.form-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: fit-content;
+    min-width: fit-content;
+    max-width: 600px;
+    padding: 20px 20px 15px 20px;
+    text-align: center;
+    border-radius: 25px;
+    backdrop-filter: blur(20px);
+}
+
+.form-box h2 {
+    font-size: 30px;
+    position: relative;
+    color: #FFFFFF;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.form-box h2::after {
+    content: '';
+    width: 100px;
+    height: 3px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.form-box .btn-field #passTxt {
+    padding: 0;
+    margin: 5px 2px 5px 0;
+    width: 15px;
+}
+
+.form-box .btn-field p {
+    margin: 5px 2px 5px 0;
+    padding: 0;
+}
+
+.input-field-profile {
+    background: #eaeaea;
+    border-radius: 5px;
+    display: block;
+    height: 20px;
+    transition: max-height 0.5s;
+    overflow: hidden;
+    margin-top: 5px;
+    padding: 0;
+    width: 200px;
+}
+
+.input-field {
+    background: #eaeaea;
+    border-radius: 5px;
+    display: block;
+    height: 30px;
+    transition: max-height 0.5s;
+    overflow: hidden;
+    padding: 0;
+    width: 90%;
+    margin-top: 10px;
+}
+
+.input-group {
+    margin: 10px 0 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.input-group p {
+    margin-top: 5px;
+}
+
+.error .success {
+    width: fit-content;
+    z-index: 1;
+    margin: auto;
+}
+
+.error p {
+    letter-spacing: 1px;
+    font-size: 15px;
+    color: #ff0000;
+    margin: 30px;
+}
+
+.error-container {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100px;
+    max-width: 300px;
+    min-height: 40px;
+    max-height: 100px;
+    text-align: center;
+    background: #ffc4c4;
+    border: none;
+    border-radius: 10px;
+    color: #ff0000;
+    z-index: 10;
+}
+
+.error-container .close {
+    position: absolute;
+    top: 5px;
+    right: 6px;
+    font-size: 20px;
+    cursor: pointer;
+    background: transparent;
+    border-radius: 100px;
+    width: fit-content;
+    height: fit-content;
+    color: #ff0000;
+    padding: 0px 6px 2px 6px;
+}
+
+.error .close:hover,
+.close:focus {
+    opacity: 0.5;
+}
+
+#success-container {
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100px;
+    max-width: 300px;
+    min-height: 40px;
+    max-height: 100px;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    z-index: 10;
+    color: #008000;
+    background: #ccffcc;
+}
+
+.success p {
+    letter-spacing: 1px;
+    font-size: 15px;
+    color: #008000;
+    margin: 30px;
+}
+
+.success-container .close,
+.success-container .close a {
+    position: absolute;
+    top: 5px;
+    right: 6px;
+    font-size: 20px;
+    cursor: pointer;
+    background: transparent;
+    border-radius: 100px;
+    width: fit-content;
+    height: fit-content;
+    color: #008000;
+    padding: 0px 6px 2px 6px;
+}
+
+.btn-field a {
+    color: #FFFFFF;
+    font-size: 15px;
+    padding: 10px;
+}
+
+input {
+    width: 90%;
+    height: 100%;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    align-items: center;
+}
+
+
+
+input[type=button] {
+    padding: 0;
+    margin: 0;
+}
+
+.btn input {
+    background: #FFFFFF;
+    color: #000000;
+    border-radius: 25px;
+    font-size: 15px;
+    text-decoration: none;
+    height: 10px;
+    margin-top: 5px;
+    overflow: hidden;
+}
+
+#datepicker {
+    margin-bottom: 5px;
+    text-align: center;
+    color: #000000;
+    padding: 0;
+}
+
+#datepicker::placeholder {
+    text-align: center;
+    color: #000000;
+}
+
+#datepicker:hover {
+    color: #E5BB61;
+}
+
+.btn-field {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-field .btn {
+    flex-basis: 30%;
+    color: #FFFFFF;
+    height: 40px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    margin-top: 10px;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 30%;
+    min-width: 70px;
+    max-width: 200px;
+    background-color: #E5BB61;
+    color: #FFFFFF;
+    min-height: 30px;
+    max-height: 40px;
+    margin-bottom: 5px;
+    border-radius: 25px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.btn:hover {
+    color: #000000;
+}
+
+.btn a:hover {
+    color: #000000;
+}
+
+form p {
+    text-align: left;
+    font-size: 13px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+form p a {
+    color: #E5BB61;
+    text-decoration: none;
+}
+
+form p a:hover {
+    color: #FFFFFF;
+    text-shadow: 0px 2px 10px #E5BB61;
+}
+
+.book-container {
+    width: auto;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    padding: 0 2% 0 2%;
+}
+
+.book-container h1 {
+    font-size: 30px;
+    position: relative;
+    color: #FFFFFF;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.appointments-table {
+    width: fit-content;
+    margin: 20px auto auto auto;
+    padding: 10px 20px 10px 20px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    text-align: center;
+    background: #000000;
+    color: #FFFFFF;
+    overflow-y: scroll;
+}
+
+.appointments-container {
+    width: 98%;
+    height: 95%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    overflow-y: scroll;
+}
+
+.appointments-container::-webkit-scrollbar {
+    width: 5px;
+}
+
+
+tbody .tr {
+    border-radius: 30px;
+    color: #FFFFFF;
+}
+
+tbody .tr td {
+    border: 2px inset #EAEAEA;
+}
+
+.updateTable {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+}
+
+.signUp {
+    font-size: 10px;
+    color: #E5BB61;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.signUp:hover {
+    color: #FFFFFF;
+    text-shadow: 0px 0px 10px #E5BB61;
+}
+
+.descSignUp {
+
+    font-size: 10px;
+    color: #FFFFFF;
+}
+
+th {
+    width: 200px;
+    font-size: 20px;
+    background-color: #E5BB61;
+    border: 1px solid #E5BB61;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.bookDiv table {
+    width: 90%;
+}
+
+td {
+    padding: 5px 5px 5px 0;
+}
+
+.logInLink {
+    color: #E5BB61;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+.logInLink:hover {
+    color: #FFFFFF;
+    text-shadow: 0px 0px 10px #E5BB61;
+}
+
+.descSignIn {
+    font-size: 10px;
+    color: #FFFFFF;
+}
+
+.cSignUp {
+    letter-spacing: 2px;
+    font-size: 30px;
+    color: #E5BB61;
+    border: none;
+}
+
+select {
+    background: transparent;
+    color: #000000;
+    font-size: 15px;
+    outline: none;
+    border: none;
+    text-align: center;
+    appearance: none;
+}
+
+select:hover {
+    color: #FFFFFF;
+}
+
+.popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: fit-content;
+    max-width: 600px;
+    min-height: fit-content;
+    max-height: max-content;
+    padding: 20px 20px 15px 20px;
+    border-radius: 25px;
+    background-color: #E5BB61;
+    display: none;
+    text-align: center;
+}
+
+/* Style the popup content */
+.popup-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.poppup .btn-field {
+    flex-basis: 30%;
+    height: 100%;
+    border-radius: 25px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.popup .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: content;
+    background-color: #FFFFFF;
+    color: #000000;
+    max-width: 100%;
+    height: fit-content;
+    margin-bottom: 5px;
+    border-radius: 25px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
+
+.popup .btn:hover {
+    color: #E5BB61;
+    background-color: #000000;
+}
+
+.popup h1 {
+    font-size: 30px;
+    margin-top: 10px;
+    color: #FFFFFF;
+}
+
+
+/* Style the close button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    background: #000000;
+    border-radius: 200px;
+    width: fit-content;
+    height: fit-content;
+    padding: 0 10px 5px 10px;
+    color: #E5BB61;
+}
+
+.editclose {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    background: #000000;
+    border-radius: 200px;
+    width: fit-content;
+    height: fit-content;
+    padding: 0 10px 5px 10px;
+    color: #E5BB61;
+}
+
+.close a {
+    text-decoration: none;
+    color: #E5BB61;
+}
+
+.editclose a {
+    text-decoration: none;
+    color: #E5BB61;
+}
+
+.close:hover {
+    opacity: 0.6;
+}
+
+.editclose:hover {
+    opacity: 0.6;
+}
+
+/* Style the overlay */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+}
+
+.bookDiv {
+    border-radius: 25px;
+    background-color: #000000;
+    min-height: fit-content;
+    max-height: max-content;
+    width: 500px;
+    padding: 10px 0 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    margin-top: 10px;
+}
+
+.bookDiv.date {
+    color: #000000;
+}
+
+.bookDiv input {
+    color: #FFFFFF;
+}
+
+.bookDiv .btn {
+    width: 300px;
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+.label {
+    font-size: 12px;
+    color: #FFFFFF;
+    padding: 5px 3px 0 0;
+    height: 20px;
+    text-align: right;
+}
+
+label {
+    margin-bottom: 5px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+}
+
+.profile-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #E5BB61;
+    height: 50px;
+}
+
+.dashboard {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.history {
+    display: flex;
+    justify-content: center;
+    width: 500px;
+    margin: 0 auto 0 auto;
+}
+
+.history h1 {
+    font-size: 15px;
+}
+
+.history th {
+    font-size: 12px;
+}
+
+.services {
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    height: 500px;
+    margin: auto;
+    overflow-y: scroll;
+}
+
+.services::-webkit-scrollbar {
+    width: 5px;
+}
+
+.services .appointments-table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+.services .appointments-table thead {
+    border: none;
+}
+
+.services .appointments-table th {
+    background-color: #E5BB61;
+}
+
+.services .appointments-table td {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+img {
+    width: 150px;
+    margin: auto;
+}

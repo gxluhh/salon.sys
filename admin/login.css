@@ -1,0 +1,101 @@
+	#error{animation:shake .50s;}
+   	@keyframes shake{
+   		0%{transform: translateX(0)};
+   		20%{transform: translateX(-10px)};
+   		40%{transform: translateX(10px)};
+   		60%{transform: translateX(-10px)};
+   		80%{transform: translateX(10px)};
+   		100%{transform: translateX(0)};
+   	}
+   
+	.card {
+		background: transparent;
+		width: 500px;
+		height:550px;
+		background-size: cover;
+		background-position: center;
+		border-radius: 10px;
+	  	box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+	  	overflow: hidden;
+	  	justify-content:space-evenly;
+	}
+	
+	.card-header{
+		background-color: #E5BB61;
+		width: 500px;
+		color: white;
+		font-family: Aeonik;
+		font-weight: bold;
+	}
+	
+	
+	form{
+		box_sizing: border-box;
+		width: 100%;
+		height: 100%;
+		padding: 40px;
+		flex-direction: column;
+		display: flex;
+		gap: 20px;
+		backdrop-filter: blur(5px);
+		font-family: helvetica;
+	}
+	
+	.btn{
+		background-color: #E5BB61;
+		font-family: Joker;
+		color: white;
+		font-weight: bold;
+	}
+	
+	.btn:hover{
+		background-color: #E4D3CF;
+		color: black;
+	}
+	
+	.btn-close{
+		color: white;
+	}
+	
+	.mt-3{
+		color: white;
+		font-family: Joker;
+	}
+	
+	.signUp a{
+		text-decoration: none;
+		color: yellow;
+		backdrop-filter: grey(2px);
+		font-weight: bold;
+	
+	}
+	
+	a:hover{ 
+		text-decoration: underline;
+		color:white;
+		filter: drop-shadow(10px 5px 10px pink);
+	}
+	
+	#passTxt{
+		font-size:13;
+		color: white;
+		font-family: Joker;
+	}
+	
+	body{
+		
+		background-image: URL('yellow.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+    		position: relative;
+	}
+	
+	#error{
+		text-align: center;
+		margin-top: 18px;
+		color: yellow;
+		font-size:15;
+		font-family: Joker;
+	}
+	

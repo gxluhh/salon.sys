@@ -1,0 +1,103 @@
+    .icon {
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    body {
+        background-color: #E8D8C4;
+    }
+    .chart-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 20px; /* Add space between charts */
+        padding: 20px;
+    }
+    .timeframe-select {
+        display: flex;
+        justify-content: center;
+        background-color: #675D50;
+    }
+    h2 {
+        font-family: Joker;
+        color: white;
+        font-weight: bold;
+        justify-content: start;
+        text-align: left;
+        background-color: #4F0E0E;
+        padding: 10px;
+    }
+    #timeFrame {
+        margin-top: 10px;
+        width: 100%;
+        background-color: #675D50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        font-family: Joker;
+    }		
+    #timeFrame:hover {
+        color: #322C2B;
+        background-color: #F5EFE6;
+    }
+    .item-container, .btn {
+        display: flex;
+        gap: 20px; /* Add space between items */
+        justify-content: center;
+    }
+    .item, .btn {
+        flex: 1; /* Make items take up equal space */
+        padding: 20px; /* Add padding for better appearance */
+        border-radius: 5px; /* Optional: add rounded corners */
+        color: white; /* Text color */
+        justify-content: center;
+    }
+    .item.staff {
+        background-color: #49243E;
+        height: 250px;
+        width: 50px;
+        font-size: 20px;
+    }
+    .item.client {
+        background-color: #153448; 
+        height: 250px;
+        width: 50px;
+        font-size: 20px;
+        justify-content: center;
+    }
+    .item.sales {
+        background-color: #8B322C; 
+        height: 250px;
+        width: 50px;
+        font-size: 20px;
+        justify-content: center;
+    }
+    .item.services {
+    	background-color: #141E46; 
+        height: 250px;
+        width: 50px;
+        font-size: 20px;
+        justify-content: center;
+    }
+    
+    h5 {
+        font-family: Joker;
+        font-weight: bold;
+        color: white;
+        padding: 10px; /* Add padding for spacing */
+        text-align: center; /* Center align text */
+        box-sizing: border-box; /* Include padding in the element's width and height */
+        word-wrap: break-word; /* Break long words to fit the container */
+    }
+    
+    a { text-decoration: none; }
+    #cnt { font-size: 25px; color: white; }
+    .cons { font-size: 40px; color: white; }
+    
+    .item:hover {
+        background-color: black;
+        box-shadow: 2px 2px 10px #F0EBE3;
+    }

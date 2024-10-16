@@ -1,0 +1,142 @@
+.tableName {
+            text-align: left;
+            color: white;
+            font-size: 20px;
+            font-family: Joker;
+            font-weight: bold;
+            background-color: #2F2519;
+        }
+
+        tr {
+            color: white;
+            background-color: #675D50;
+            font-family: Joker;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        #icon:hover, a:hover {
+            opacity: 0.5;
+        }
+
+        table {
+            border-radius: 10px;
+        }
+
+        body {
+            background-color: #E8D8C4;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            width: 100%;
+            background-color: #675D50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            font-family: Joker;
+        }
+
+        .btn:hover {
+            background-color: #574d42;
+            color: white;
+            opacity: 0.5;
+        }
+
+        .message {
+            text-align: center;
+            margin-bottom: 10px;
+            color: blue;
+            font-weight: bold;
+        }
+
+        .error-message {
+            text-align: center;
+            margin-bottom: 10px;
+            color: red;
+            font-weight: bold;
+        }
+        
+        .overlay, .overlay2, .overlay3, .overlay4 {
+	            position: fixed;
+	            top: 0;
+	            left: 0;
+	            width: 100%;
+	            height: 100%;
+	            background-color: rgba(0, 0, 0, 0.5);
+	            z-index: 1000;
+	            display: none;
+	        }
+	
+	  .popup, .popup2, .popup3, .popup4 {
+	            position: fixed;
+	            width: 30%;
+	            top: 50%;
+	            left: 50%;
+	            transform: translate(-50%, -50%);
+	            background-color: #F8F4E1;
+	            padding: 20px;
+	            border-radius: 10px;
+	            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+	            z-index: 1001;
+	            display: none;
+	  }
+	
+	        .popup.show,
+	        .overlay.show, .popup2.show,
+	        .overlay2.show, .popup3.show,
+	        .overlay3.show, .popup4.show,
+	        .overlay4.show {
+	            display: block;
+	        }
+	
+	
+	        .popup h3, .popup2 h3, .popup3 h3 {
+	            margin-bottom: 20px;
+	            font-family: Joker;
+	            font-weight: bold;
+	            justify-content: center;
+	            text-align: center;
+	        }
+	
+	        .btn-close {
+	            float: right;
+	            font-size: 12px;
+	            padding:9px;
+	        }
+	
+	        .popup-content table{
+	            width:100%;
+	            margin-bottom:12px;
+	        }
+	
+	        .popup-content table td {
+	            padding: 5px;
+	            text-align: left;
+	            border-radius: 5px;
+	            width: 100%;
+	        }
+	        
+	        .popup-content input{
+		    width: 100%; 
+		    padding: 8px;
+		    border-radius: 5px;
+		    border: 1px solid #ccc;
+		}
+	
+		#reschedule_time{
+			background-color:white;
+			color: black;}
+		
+	        .btn-field {
+	            text-align: center;
+	        }
+	        
+	        #add_icon{
+	        	background-color:white;
+	        	border-radius: 12px;
+	        }
